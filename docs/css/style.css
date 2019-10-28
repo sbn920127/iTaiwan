@@ -1,0 +1,78 @@
+* {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.wrap {
+  width: 100%;
+  backdrop-filter: blur(5px);
+  max-width: 1200px;
+  margin: auto;
+  background-color: antiquewhite;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.txt {
+  text-align: center;
+  position: absolute;
+  bottom: 10vh;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+.txt-wrap {
+  background-color: rgba(255, 255, 255, .6);
+  backdrop-filter: blur(5px);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0, .2);
+}
+.txt p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #152C77;
+  margin: 0 0 1em 0;
+}
+.btn-location {
+  color: #3e64ff;
+  font-size: 1rem;
+  padding: .5em 1.5em;
+  border: 2px solid #3e64ff;
+  border-radius: 100px;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: 0.1s 0.3s;
+}
+.btn-location::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #3e64ff;
+  z-index: -1;
+  transition: .4s;
+}
+.btn-location:hover {
+  color: white;
+}
+.btn-location:hover::after {
+  height: 100%;
+}
+#map {
+  position: relative;
+  width: 100%;
+  padding-top: 100vh;
+}
+.map-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
