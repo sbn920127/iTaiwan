@@ -9,20 +9,20 @@ window.map = map;
 
 
 $.ajax({
-  url: '/data/export.json',
+  url: './data/export.json',
   method: 'get',
   dataType: 'json',
   data: {}
 }).done(function (res) {
   $.each(res, function (i, item) {
     iTaiwanLocation.push({lat: Number(item.LATITUDE), lng: Number(item.LONGITUDE)})
-  })
+  });
 
   filterMarkers();
 
 }).fail(function (err) {
   console.log(err);
-})
+});
 
 function initAutocomplete() {
   let getlocation = {
